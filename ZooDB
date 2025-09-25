@@ -1,0 +1,40 @@
+--สร้างDatabase--
+create database Zoo
+
+--ลบตาราง
+
+drop database Zoo
+
+-- สร้างตาราง 
+
+create table Type (TypeID char(3) , 
+					TName Varchar(50),
+					primary key (TypeID))
+
+select * from Animal
+
+create table Animal
+(AID int Primary key identity(1,1),
+AName Varchar(50) not null,
+Descriptions Varchar(255)null,
+QTY Int,
+TypeID char(3),
+foreign key(TypeID)references Type(TypeID))
+
+
+--เพิ่มคอลัมน์--
+
+Alter table Animal
+	Add scienceName Varchar(30)
+
+
+
+
+create database ZooDB
+
+create table AnimalType 
+(
+animal_type_id int not null primary key,
+type_name NVarchar(100) not null,
+description
+)
